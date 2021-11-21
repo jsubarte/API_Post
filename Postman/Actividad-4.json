@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "711c5c5d-e383-4daf-b987-3b84d44b21d0",
+		"name": "Actividad-4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crear-post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Post 2",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Este es el texto del post 2",
+							"type": "text"
+						},
+						{
+							"key": "author",
+							"value": "autor 2",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/Joel/Desktop/Camera/20151108_174132.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar-post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detalle-post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/posts/id",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar-post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"text\": \"Este es el nuevo texto del post 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/posts/id",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar-post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/posts/id",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear-usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"nombre apellido\",\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplepassword\",\r\n    \"bio\": \"Esta es una biografia de ejemplo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/users",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login-usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"password\": \"examplepassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/users/login",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout-usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTg1YWIwYmU2ZTk0YmY2NzRhZWFlZmQiLCJleHAiOjE2MzYxNTE4NjUsImlhdCI6MTYzNjE1MDA2NX0.bKe0ixokYjM4J0np314tLoX3bF2SBR5AsVkpZV4FXcw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://api-prueba-10.herokuapp.com/api/users/logout",
+					"protocol": "https",
+					"host": [
+						"api-prueba-10",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
